@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rvt.knox">
+
+    <application>
+        <!-- Enable the selective Knox permissions -->
+        <meta-data android:name="com.samsung.knoxlicense.permissions" android:value="true"/>
+
+        <!-- Knox Admin Receiver -->
+        <receiver
+            android:name=".receiver.KnoxAdminReceiver"
+
+            android:permission="android.permission.BIND_DEVICE_ADMIN" >
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin_receiver" />
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Activate Knox License -->
+        <receiver android:name=".receiver.KnoxLicenseReceiver" >
+            <intent-filter>
+                <action android:name="com.samsung.android.knox.intent.action.KNOX_LICENSE_STATUS" />
+                <action android:name="com.samsung.android.knox.intent.action.LICENSE_STATUS" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

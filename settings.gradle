@@ -1,0 +1,4 @@
+include ':knox'
+include ':app'
+rootProject.name = "StorageDemo"
+include ':appusageanalysis'

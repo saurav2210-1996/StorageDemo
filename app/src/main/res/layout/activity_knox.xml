@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/activateAdminbtn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="activate admin"
+        android:layout_below="@+id/logview_id"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/deactivateAdminbtn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/activateAdminbtn"
+        android:layout_below="@+id/activateAdminbtn"
+        android:text="deactivate admin" />
+
+    <Button
+        android:id="@+id/activateLicencebtn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/activateAdminbtn"
+        android:layout_below="@+id/deactivateAdminbtn"
+        android:text="activate license" />
+
+    <Button
+        android:id="@+id/deactivateLicenseBtn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activateLicencebtn"
+        android:layout_centerHorizontal="true"
+        android:text="Deactivate license" />
+
+    <Button
+        android:id="@+id/toggleCamerabtn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:layout_alignStart="@+id/activateAdminbtn"
+        android:layout_below="@+id/activateBackwardsCompatibleKeyBtn"
+        android:text="toggle camera" />
+
+    <Button
+        android:id="@+id/activateBackwardsCompatibleKeyBtn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/deactivateLicenseBtn"
+        android:layout_centerHorizontal="true"
+        android:text="Activate backwards compatible key"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/toggleTimaKeystoreState"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activateBackwardsCompatibleKeyBtn"
+        android:layout_centerHorizontal="true"
+        android:text="TOGGLE TIMA KEYSTORE STATE"
+        android:layout_marginBottom="20px" />
+
+
+    <TextView
+        android:id="@+id/logview_id"
+        android:gravity="bottom"
+        android:layout_width="320dp"
+        android:layout_height="230dp"
+        android:textColor="#3F51B5"
+        android:scrollbars="vertical"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="22dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
