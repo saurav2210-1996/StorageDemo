@@ -69,12 +69,12 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        checkPermissions()
-        setOnClickListener()
-        setObservable()
+        //checkPermissions()
+        //setOnClickListener()
+        //setObservable()
 
-        unzip()
-        test()
+        //unzip()
+        //test()
 
         btnSchedule.setOnClickListener {
             appUsageStateUtil.setupAppStatisticSchedules(13,36)

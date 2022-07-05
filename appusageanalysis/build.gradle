@@ -6,6 +6,7 @@ plugins {
     id 'kotlin-android-extensions'
     id 'androidx.navigation.safeargs.kotlin'
     id 'dagger.hilt.android.plugin'
+    id 'maven-publish'
 }
 
 android {
@@ -81,4 +82,18 @@ dependencies {
     implementation 'androidx.work:work-runtime:2.7.1'
     // WorkManager
     implementation "androidx.work:work-runtime-ktx:$worker_version"
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+
+                groupId = 'com.github.saurav2210-1996'
+                artifactId = 'app-statistics'
+                version = '1.0.0'
+            }
+        }
+    }
 }
